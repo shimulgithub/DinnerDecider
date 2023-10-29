@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : ComponentActivity() {
-    var list = arrayListOf<String>("Hamburger", "Pizza", "Mexican", "American", "Chinese")
+    var foodlist = arrayListOf<String>("Hamburger", "Pizza", "Mexican", "American", "Chinese")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,12 +36,12 @@ class MainActivity : ComponentActivity() {
     }
 
     fun getRandomFood():String{
-        return list.random()
+        return foodlist.random()
     }
 
     fun addNewFood(value:String?){
         if (value == null) { return }
         var _value = value?:""
-        list.add(_value)
+        foodlist.add(_value)
     }
 }
